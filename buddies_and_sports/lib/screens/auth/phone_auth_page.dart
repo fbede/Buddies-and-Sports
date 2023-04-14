@@ -147,7 +147,6 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
 
   void verifyPhone() async {
     final messenger = ScaffoldMessenger.of(context);
-    final router = GoRouter.of(context);
     final isValid = phoneKey.currentState!.validate();
 
     if (numberOfTimesOTPIsSent > 5) {
