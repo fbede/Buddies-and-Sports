@@ -44,17 +44,16 @@ class _VerificationPageState extends State<VerificationPage> {
   }
 
   void resendVerificationEmail() async {
+    final messenger = ScaffoldMessenger.of(context);
     isLoading = true;
     setState(() {});
 
     try {
-      await FirebaseAuth.instance.currentUser!
-          .sendEmailVerification()
-          .then((value) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text(UserText.Email_Sent)),
-        );
-      });
+      await FirebaseAuth.instance.currentUser!.sendEmailVerification();
+
+      messenger.showSnackBar(
+        const SnackBar(content: Text(UserText.Email_Sent)),
+      );
     } on Exception catch (e) {
       final errorMessage = ExceptionHandler.errorMessageFromError(exception: e);
       ScaffoldMessenger.of(context).showSnackBar(

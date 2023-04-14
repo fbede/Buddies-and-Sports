@@ -16,21 +16,22 @@ class SettingsPage extends StatelessWidget {
         children: [
           Expanded(
               child: ListView(
-            children: const [
+            children: [
               ListTile(
-                leading: Icon(Icons.account_circle),
-                title: Text('Update Username'),
-                trailing: Icon(Icons.navigate_next),
+                leading: const Icon(Icons.account_circle),
+                title: const Text('Update Username'),
+                trailing: const Icon(Icons.navigate_next),
+                onTap: () => context.pushNamed(Routes.updateUsername),
               ),
               ListTile(
-                leading: Icon(Icons.email),
-                title: Text('Change Email'),
-                trailing: Icon(Icons.navigate_next),
+                leading: const Icon(Icons.email),
+                title: const Text('Change Email'),
+                trailing: const Icon(Icons.navigate_next),
               ),
               ListTile(
-                leading: Icon(Icons.lock),
-                title: Text('Change Password'),
-                trailing: Icon(Icons.navigate_next),
+                leading: const Icon(Icons.lock),
+                title: const Text('Change Password'),
+                trailing: const Icon(Icons.navigate_next),
               ),
             ],
           )),

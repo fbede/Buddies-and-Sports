@@ -2,6 +2,7 @@ import 'package:buddies_and_sports/utils/exceptions/exception_handler.dart';
 import 'package:buddies_and_sports/utils/strings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class UpdateUsernamePage extends StatefulWidget {
   const UpdateUsernamePage({super.key});
@@ -39,12 +40,11 @@ class _UpdateUsernamePageState extends State<UpdateUsernamePage> {
                 controller: controller,
                 keyboardType: TextInputType.name,
               ),
-              const SizedBox(height: 24),
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
               ElevatedButton(
                 onPressed: () => updateUserName(),
                 child: !isLoading
-                    ? const Text(UserText.Send_Verification_Email)
+                    ? const Text(UserText.Update_Username)
                     : const CircularProgressIndicator(
                         color: Colors.white,
                       ),
@@ -57,17 +57,18 @@ class _UpdateUsernamePageState extends State<UpdateUsernamePage> {
   }
 
   void updateUserName() async {
+    final messenger = ScaffoldMessenger.of(context);
+    final router = GoRouter.of(context);
     isLoading = true;
     setState(() {});
 
     try {
       await FirebaseAuth.instance.currentUser!
-          .sendEmailVerification()
-          .then((value) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text(UserText.Email_Sent)),
-        );
-      });
+          .updateDisplayName(controller.text);
+      router.pop();
+      messenger.showSnackBar(
+        const SnackBar(content: Text(UserText.Username_Updated)),
+      );
     } on Exception catch (e) {
       final errorMessage = ExceptionHandler.errorMessageFromError(exception: e);
       ScaffoldMessenger.of(context).showSnackBar(

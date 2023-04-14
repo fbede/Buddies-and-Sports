@@ -104,7 +104,7 @@ class _SignInPageState extends State<SignInPage> {
       );
 
   Widget _buildPhoneButton() => ElevatedButton(
-        onPressed: () => signInWithEmail(),
+        onPressed: () => context.pushNamed(Routes.phoneAuth),
         child: const Text(UserText.Sign_In_With_Phone),
       );
 

@@ -12,6 +12,7 @@ class UserText {
   static const Password = 'Password';
   static const Sign_In = 'Sign In';
   static const Register = 'Register';
+  static const OTP = 'OTP';
   static const Have_Account_Qmark_ = 'Have Account? ';
   static const No_Account_Qmark_ = 'No Account? ';
   static const Sign_In_With_Phone = 'Sign In With Phone';
@@ -29,6 +30,9 @@ class UserText {
       'Please Select at least one Interest';
   static const Update_Username = 'Update Username';
   static const Username = 'Username';
+  static const Username_Updated = 'Username Updated';
+  static const Phone = 'Phone';
+  static const phone_hint = '+234 123 456 7890';
 }
 
 class PrefKeys {

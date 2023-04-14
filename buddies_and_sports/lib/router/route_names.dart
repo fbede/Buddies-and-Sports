@@ -5,6 +5,7 @@ class Routes {
   static const phoneAuth = '/phoneAuth';
   static const verify = 'verify';
   static const selectInterest = '/selectInterest';
+  static const updateUsername = '/updateUsername';
 
   //app routes
   static const home = '/';

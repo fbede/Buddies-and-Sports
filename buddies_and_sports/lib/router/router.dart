@@ -1,7 +1,9 @@
 import 'package:buddies_and_sports/components/app_shell.dart';
 import 'package:buddies_and_sports/router/route_names.dart';
 import 'package:buddies_and_sports/screens/auth/login_page.dart';
+import 'package:buddies_and_sports/screens/auth/phone_auth_page.dart';
 import 'package:buddies_and_sports/screens/auth/register_page.dart';
+import 'package:buddies_and_sports/screens/auth/update_username_page.dart';
 import 'package:buddies_and_sports/screens/auth/verification_page.dart';
 import 'package:buddies_and_sports/screens/blank_pages.dart';
 import 'package:buddies_and_sports/screens/profile_page.dart';
@@ -70,10 +72,16 @@ final _authenticationRoutes = <RouteBase>[
     builder: (_, __) => const RegisterPage(),
   ),
   GoRoute(
+    path: Routes.updateUsername,
+    name: Routes.updateUsername,
+    parentNavigatorKey: _rootNavigatorKey,
+    builder: (_, __) => const UpdateUsernamePage(),
+  ),
+  GoRoute(
     path: Routes.phoneAuth,
     name: Routes.phoneAuth,
     parentNavigatorKey: _rootNavigatorKey,
-    builder: (_, __) => const SizedBox(),
+    builder: (_, __) => const PhoneAuthPage(),
   ),
 ];
 
