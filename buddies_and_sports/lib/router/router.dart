@@ -1,5 +1,8 @@
 import 'package:buddies_and_sports/components/app_shell.dart';
 import 'package:buddies_and_sports/router/route_names.dart';
+import 'package:buddies_and_sports/screens/auth/change_email_page.dart';
+import 'package:buddies_and_sports/screens/auth/change_password_page.dart';
+import 'package:buddies_and_sports/screens/auth/forgot_password_page.dart';
 import 'package:buddies_and_sports/screens/auth/login_page.dart';
 import 'package:buddies_and_sports/screens/auth/phone_auth_page.dart';
 import 'package:buddies_and_sports/screens/auth/register_page.dart';
@@ -82,6 +85,24 @@ final _authenticationRoutes = <RouteBase>[
     name: Routes.phoneAuth,
     parentNavigatorKey: _rootNavigatorKey,
     builder: (_, __) => const PhoneAuthPage(),
+  ),
+  GoRoute(
+    path: Routes.forgotPassword,
+    name: Routes.forgotPassword,
+    parentNavigatorKey: _rootNavigatorKey,
+    builder: (_, __) => const ForgotPasswordPage(),
+  ),
+  GoRoute(
+    path: Routes.changeEmail,
+    name: Routes.changeEmail,
+    parentNavigatorKey: _rootNavigatorKey,
+    builder: (_, __) => const EmailChangePage(),
+  ),
+  GoRoute(
+    path: Routes.changePassword,
+    name: Routes.changePassword,
+    parentNavigatorKey: _rootNavigatorKey,
+    builder: (_, __) => const PasswordChangePage(),
   ),
 ];
 

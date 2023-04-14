@@ -6,6 +6,9 @@ class Routes {
   static const verify = 'verify';
   static const selectInterest = '/selectInterest';
   static const updateUsername = '/updateUsername';
+  static const forgotPassword = '/forgotPassword';
+  static const changeEmail = '/changeEmail';
+  static const changePassword = '/changePassword';
 
   //app routes
   static const home = '/';

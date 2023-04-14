@@ -133,9 +133,8 @@ class _SignInPageState extends State<SignInPage> {
         textAlign: TextAlign.center,
         text: TextSpan(
           recognizer: TapGestureRecognizer()
-            //stuff
-            ..onTap = () => context.push('/resetPassword'),
-          text: 'Forgot Password',
+            ..onTap = () => context.pushNamed(Routes.forgotPassword),
+          text: UserText.Forgot_Password,
           style: TextStyle(
             decoration: TextDecoration.underline,
             color: Theme.of(context).colorScheme.secondary,

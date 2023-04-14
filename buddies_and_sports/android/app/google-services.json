@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "116155111579-0ol443etuus413rsb0qk630q0555e79q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.buddies_and_sports",
+            "certificate_hash": "0f65d8c35301fb8f20919839c35651144e6cfd51"
+          }
+        },
+        {
           "client_id": "116155111579-6t1don2ece41j2nam4lm8acilct7v7n0.apps.googleusercontent.com",
           "client_type": 3
         }

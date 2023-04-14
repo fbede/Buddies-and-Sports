@@ -12,10 +12,9 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings & Privacy')),
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-              child: ListView(
+          ListView(
             children: [
               ListTile(
                 leading: const Icon(Icons.account_circle),
@@ -27,22 +26,26 @@ class SettingsPage extends StatelessWidget {
                 leading: const Icon(Icons.email),
                 title: const Text('Change Email'),
                 trailing: const Icon(Icons.navigate_next),
+                onTap: () => context.pushNamed(Routes.changeEmail),
               ),
               ListTile(
                 leading: const Icon(Icons.lock),
                 title: const Text('Change Password'),
                 trailing: const Icon(Icons.navigate_next),
+                onTap: () => context.pushNamed(Routes.changePassword),
               ),
             ],
-          )),
-          TextButton(
-            onPressed: () => logout(context),
-            child: const Text(
-              'Logout',
-              style: TextStyle(color: Colors.red),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: TextButton(
+              onPressed: () => logout(context),
+              child: const Text(
+                'Logout',
+                style: TextStyle(color: Colors.red),
+              ),
             ),
           ),
-          const SizedBox(height: 16),
         ],
       ),
     );
