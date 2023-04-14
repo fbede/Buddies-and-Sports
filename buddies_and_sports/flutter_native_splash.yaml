@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/sports.png
+  color_dark: "#000000"
+  image_dark: assets/images/sports.png
+
+  android_12:
+    image: assets/images/sports.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/images/sports.png
+    icon_background_color_dark: "#000000"
+
+  web: true

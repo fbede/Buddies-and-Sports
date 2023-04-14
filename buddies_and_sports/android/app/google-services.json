@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116155111579",
+    "firebase_url": "https://buddies-and-sports-default-rtdb.firebaseio.com",
+    "project_id": "buddies-and-sports",
+    "storage_bucket": "buddies-and-sports.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116155111579:android:72a1ac1c4e985b7583ce3e",
+        "android_client_info": {
+          "package_name": "com.example.buddies_and_sports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116155111579-6t1don2ece41j2nam4lm8acilct7v7n0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGpEIPCd_jkctj5t06DOeUB7_2tKWDqgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116155111579-6t1don2ece41j2nam4lm8acilct7v7n0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
